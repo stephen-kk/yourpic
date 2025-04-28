@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 const styles = [
   { key: "auto", label: "Auto", image: "/styles/auto.jpg" },
-  { key: "anime", label: "3D Anime", image: "/styles/3d-anime.jpg" },
-  { key: "model", label: "3D Model", image: "/styles/3d-model.jpg" },
+  { key: "anime", label: "3D Anime", image: "/styles/anime.jpg" },
+  { key: "model", label: "3D Model", image: "/styles/model.jpg" },
   { key: "japanese-anime", label: "Japanese Anime", image: "/styles/japanese-anime.jpg" },
   { key: "movie", label: "Movie", image: "/styles/movie.jpg" },
   { key: "comic", label: "Comic", image: "/styles/comic.jpg" },
