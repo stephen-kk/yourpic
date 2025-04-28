@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const styles = [
   { key: "auto", label: "Auto", image: "/styles/auto.jpg" },
@@ -31,9 +31,14 @@ export default function HomePage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Unknown error");
       setResultImage(data.imageUrl);
-    } catch (err: any) {
-      setError(err.message);
-      console.error("Generation failed:", err);
+    } catch (err) {
+      if (err instanceof Error) {
+        setError(err.message);
+        console.error("Generation failed:", err.message);
+      } else {
+        setError("Unknown error");
+        console.error("Unknown error:", err);
+      }
     } finally {
       setIsLoading(false);
     }
